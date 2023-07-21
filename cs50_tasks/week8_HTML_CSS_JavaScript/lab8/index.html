@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            //start our travel
+            document.addEventListener('DOMContentLoaded', function(){
+                //IF answer is correct
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#question1').innerHTML = 'Great!!!';
+                });
+
+                // if answer is incorrect
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function(){
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#question1').innerHTML = 'Wrong((';
+                    })
+                }
+
+                //input method
+                document.querySelector('#check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    if(input.value === 'Gagarin') {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#question2').innerHTML = 'Great!!!';
+                    } else{
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#question2').innerHTML = 'Wrong((';
+                    }
+                });
+
+            });
+            // TODO: Add code to check answers to questions
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the name of spase program whitch landed first human to the Moon?</h3>
+
+                <button class = "correct">APPOLO</button>
+                <button class = "incorrect">ADONIS</button>
+                <button class = "incorrect">HERAKL</button>
+                <button class = "incorrect">ZEVS</button>
+
+                <p id = "question1"></p>
+                <!-- TODO: Add multiple choice question here -->
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <h3>Who was the very first man in a spase?</h3>
+
+                <input type ="text"></input>
+                <button id = "check">CHECK YOUR ANSWER</button>
+
+                <p id = question2></p>
+                <!-- TODO: Add free response question here -->
+
+            </div>
+
+        </div>
+    </body>
+</html>
