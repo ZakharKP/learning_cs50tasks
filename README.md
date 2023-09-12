@@ -19,11 +19,11 @@ The repository is organized into folders corresponding to different weeks and to
   - `lab2/`: Contains the lab for Week 2.
     - `scrabble.c/`: Implementation files for the lab's solutions.
     - `...`: Additional resources or files related to the lab.
-    - `scrabble.md`: Task description and requirements for the lab.
+    - `README.md`: Task description and requirements for the lab.
   - `pset2/`: Contains the problem set for Week 2.
     - `caesar/`: Contains the "Caesar" task for Week 2.
       - `caesar.c`: Solution file for the "Caesar" task.
-      - `caesar.md`: Task description and requirements for the "Caesar" task.
+      - `README.md`: Task description and requirements for the "Caesar" task.
 - `week3_Algorithms/`: Contains tasks and projects related to Week 3, focusing on algorithms.
 - `.../`
 
